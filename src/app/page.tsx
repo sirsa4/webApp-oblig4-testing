@@ -6,19 +6,21 @@ import {quiz} from "../alternative_1/questionsData"
 export default function Home() {
  // console.log(questionsLength(quiz));
 
- const checkIfAll4AnswersAreArraysHave4AnswersInside = (questionList: any)=>{
-  let numberofAnswerAlternative = 0
+ const checkIfAll4AnswersAlternativeHaveApropetyNameCorrectAndIsBoolean = (questionList: any)=>{
+  let numberofCorrect = 0
   for (let i = 0; i < quiz.questions.length; i++) {
       
       if(Array.isArray(quiz.questions[i].answers)){
-        if(quiz.questions[i].answers.length === 4){
-          numberofAnswerAlternative++;
+        if(quiz.questions[i].answers.map(obj => obj.hasOwnProperty("correct") && typeof obj.correct === "boolean")){
+          numberofCorrect++;
         }
       }
       
      }
-     return numberofAnswerAlternative;
+     return numberofCorrect;
 }
+
+
 
   return (
     <div>

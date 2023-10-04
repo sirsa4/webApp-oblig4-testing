@@ -48,7 +48,7 @@ export const checkIfAll4AnswersAreArrays = (questionList: any)=>{
 }
 
 //function to check if all 4 answers have 4 alternatives
-//loop checks increments numberofAnswerAlternative counter variable only once per loop throught each array when it's length is 4.
+//loop checks increments numberofAnswerAlternative counter variable only once per loop throught each answers array when it's length is 4.
 export const checkIfAll4AnswersAreArraysHave4AnswersInside = (questionList: any)=>{
     let numberofAnswerAlternative = 0
     for (let i = 0; i < quiz.questions.length; i++) {
@@ -61,4 +61,20 @@ export const checkIfAll4AnswersAreArraysHave4AnswersInside = (questionList: any)
         
        }
        return numberofAnswerAlternative;
+  }
+
+  //function to test if all answer alternatives have a property called "correct" which is of boolean datatype
+  export const checkIfAll4AnswersAlternativeHaveApropetyNamedCorrectAndIsBooleanDataType = (questionList: any)=>{
+
+    let numberofCorrect = 0
+    for (let i = 0; i < quiz.questions.length; i++) {
+        
+        if(Array.isArray(quiz.questions[i].answers)){
+          if(quiz.questions[i].answers.map(obj => obj.hasOwnProperty("correct") && typeof obj.correct === "boolean")){
+            numberofCorrect++;
+          }
+        }
+        
+       }
+       return numberofCorrect;
   }

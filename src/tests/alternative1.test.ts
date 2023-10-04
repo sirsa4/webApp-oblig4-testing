@@ -1,5 +1,5 @@
 import { quiz } from "../alternative_1/questionsData";
-import { checkIfAll4AnswersAreArrays, checkIfAll4AnswersAreArraysHave4AnswersInside, checkIfQuestionsHave4Titles4Answers4HelperProperties, checkIfQuestionsIsArray, checkIfquestionsKeyExists, questionsLength } from "../alternative_1/questionsFunction";
+import { checkIfAll4AnswersAlternativeHaveApropetyNamedCorrectAndIsBooleanDataType, checkIfAll4AnswersAreArrays, checkIfAll4AnswersAreArraysHave4AnswersInside, checkIfQuestionsHave4Titles4Answers4HelperProperties, checkIfQuestionsIsArray, checkIfquestionsKeyExists, questionsLength } from "../alternative_1/questionsFunction";
 import {it,expect,describe} from "vitest"
 
 
@@ -41,6 +41,11 @@ describe("questions test",()=>{
     it("should return 4 if all answers have 4 alternatives.",()=>{
         expect(checkIfAll4AnswersAreArraysHave4AnswersInside(quiz)).toBe(4);
     });
+
+    //test to check if all answer alternatives have a one instance of property called "correct" which is of boolean datatype
+    it("should return 4 if each answer array has 1 correct boolean property",()=>{
+        expect(checkIfAll4AnswersAlternativeHaveApropetyNamedCorrectAndIsBooleanDataType(quiz)).toBe(4);
+    })
 
 });
 
