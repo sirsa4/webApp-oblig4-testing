@@ -1,10 +1,11 @@
 "use client"
 
-import { questionsLength } from "@/alternative_1/questionsFunction";
+import { checkIfQuestionsIsArray, questionsLength } from "@/alternative_1/questionsFunction";
 import {quiz} from "../alternative_1/questionsData"
 
 export default function Home() {
  // console.log(questionsLength(quiz));
+ 
 
   return (
     <div>
