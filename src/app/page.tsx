@@ -1,9 +1,11 @@
 "use client"
 
+import { questionsLength } from "@/alternative_1/questionsFunction";
 import {quiz} from "../alternative_1/questionsData"
 
 export default function Home() {
-  console.log(quiz);
+ // console.log(questionsLength(quiz));
+
   return (
     <div>
         <h1>Oblig 4 testing</h1>

@@ -1,5 +1,5 @@
 import { quiz } from "../alternative_1/questionsData";
-import { questionsLength } from "../alternative_1/questionsFunction";
+import { checkIfquestionsKeyExists, questionsLength } from "../alternative_1/questionsFunction";
 import {it,expect,describe} from "vitest"
 
 
@@ -11,9 +11,17 @@ describe("questions test",()=>{
         expect(true).toBe(true)
     });
 
+    //function to test if property "questions" exists in quiz object
+    it("should return true if property 'questions' exists",()=>{
+        expect(checkIfquestionsKeyExists(quiz,"questions")).toBe(true);
+    })
+
     //test to see there are 4 questions
     it("should return length 4",()=>{
         expect(questionsLength(quiz)).toBe(4);
     })
+
 });
+
+
 
