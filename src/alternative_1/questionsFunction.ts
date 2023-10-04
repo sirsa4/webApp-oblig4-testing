@@ -34,6 +34,7 @@ export const checkIfQuestionsHave4Titles4Answers4HelperProperties = (questionsLi
   return [titleCount, answersCount, helperCount]
 }
 
+//function to check if all 4 answers properties are array datatype
 export const checkIfAll4AnswersAreArrays = (questionList: any)=>{
     let numberAnswerArrays = 0
     for (let i = 0; i < quiz.questions.length; i++) {
@@ -45,3 +46,19 @@ export const checkIfAll4AnswersAreArrays = (questionList: any)=>{
        }
        return numberAnswerArrays;
 }
+
+//function to check if all 4 answers have 4 alternatives
+//loop checks increments numberofAnswerAlternative counter variable only once per loop throught each array when it's length is 4.
+export const checkIfAll4AnswersAreArraysHave4AnswersInside = (questionList: any)=>{
+    let numberofAnswerAlternative = 0
+    for (let i = 0; i < quiz.questions.length; i++) {
+        
+        if(Array.isArray(quiz.questions[i].answers)){
+          if(quiz.questions[i].answers.length === 4){
+            numberofAnswerAlternative++;
+          }
+        }
+        
+       }
+       return numberofAnswerAlternative;
+  }
