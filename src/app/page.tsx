@@ -5,7 +5,7 @@ import {quiz} from "../alternative_1/questionsData"
 
 export default function Home() {
  // console.log(questionsLength(quiz));
- 
+
 
   return (
     <div>

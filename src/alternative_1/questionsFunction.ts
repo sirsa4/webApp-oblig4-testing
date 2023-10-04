@@ -22,12 +22,7 @@ export const questionsLength = (questionsList: any) => {
 }
 
 //function to check questions array has 4 of each these properties: title, answers and helper.
-export const checkIfQuestionsHave4Titles4Answers4HelperProperties = (
-  questionsList: any,
-  title: string,
-  answers: string,
-  helper: string
-) => {
+export const checkIfQuestionsHave4Titles4Answers4HelperProperties = (questionsList: any,title: string,answers: string,helper: string) => {
   let titleCount = 0
   let answersCount = 0
   let helperCount = 0
@@ -37,4 +32,16 @@ export const checkIfQuestionsHave4Titles4Answers4HelperProperties = (
     if (Object.hasOwn(questionsList.questions[i], helper)) helperCount++
   }
   return [titleCount, answersCount, helperCount]
+}
+
+export const checkIfAll4AnswersAreArrays = (questionList: any)=>{
+    let numberAnswerArrays = 0
+    for (let i = 0; i < quiz.questions.length; i++) {
+        
+        if(Array.isArray(quiz.questions[i].answers)){
+          numberAnswerArrays++;
+        }
+        
+       }
+       return numberAnswerArrays;
 }

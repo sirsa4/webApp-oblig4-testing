@@ -1,5 +1,5 @@
 import { quiz } from "../alternative_1/questionsData";
-import { checkIfQuestionsHave4Titles4Answers4HelperProperties, checkIfQuestionsIsArray, checkIfquestionsKeyExists, questionsLength } from "../alternative_1/questionsFunction";
+import { checkIfAll4AnswersAreArrays, checkIfQuestionsHave4Titles4Answers4HelperProperties, checkIfQuestionsIsArray, checkIfquestionsKeyExists, questionsLength } from "../alternative_1/questionsFunction";
 import {it,expect,describe} from "vitest"
 
 
@@ -29,6 +29,11 @@ describe("questions test",()=>{
     //test to see if questions array has objects with properties: title, answers and helper, 4 of each
     it("should return [4,4,4] if all 3 properties exist in questions array",()=>{
         expect(checkIfQuestionsHave4Titles4Answers4HelperProperties(quiz,"title","answers","helper")).toStrictEqual([4,4,4]);
+    });
+
+    //test to check if all answers in questions array are also arrays
+    it("should return 4 if all answers property in questions array as also arrays",()=>{
+        expect(checkIfAll4AnswersAreArrays(quiz)).toBe(4);
     });
 
 });
