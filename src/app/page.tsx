@@ -6,7 +6,8 @@ import {quiz} from "../alternative_1/questionsData"
 export default function Home() {
  // console.log(questionsLength(quiz));
 
- const checkIfAll4AnswersAlternativeHaveApropetyNameCorrectAndIsBoolean = (questionList: any)=>{
+ const checkIfAll4AnswersAlternativeHaveApropetyNamedCorrectAndIsBooleanDataType = (questionList: any)=>{
+
   let numberofCorrect = 0
   for (let i = 0; i < quiz.questions.length; i++) {
       

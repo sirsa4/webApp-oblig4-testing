@@ -1,5 +1,5 @@
-import { quiz } from "../alternative_1/questionsData";
-import { checkIfAll4AnswersAlternativeHaveApropetyNamedCorrectAndIsBooleanDataType, checkIfAll4AnswersAreArrays, checkIfAll4AnswersAreArraysHave4AnswersInside, checkIfQuestionsHave4Titles4Answers4HelperProperties, checkIfQuestionsIsArray, checkIfquestionsKeyExists, questionsLength } from "../alternative_1/questionsFunction";
+import { quiz } from "./questionsData";
+import { checkIfAll4AnswersAlternativeHaveApropetyNamedCorrectAndIsBooleanDataType, checkIfAll4AnswersAreArrays, checkIfAll4AnswersAreArraysHave4AnswersInside, checkIfQuestionsHave4Titles4Answers4HelperProperties, checkIfQuestionsIsArray, checkIfquestionsKeyExists, questionsLength } from "./questionsFunction";
 import {it,expect,describe} from "vitest"
 
 

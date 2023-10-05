@@ -63,7 +63,7 @@ export const checkIfAll4AnswersAreArraysHave4AnswersInside = (questionList: any)
        return numberofAnswerAlternative;
   }
 
-  //function to test if all answer alternatives have a property called "correct" which is of boolean datatype
+  //function to test if all answer alternatives have one instance of a property called "correct" which is of boolean datatype
   export const checkIfAll4AnswersAlternativeHaveApropetyNamedCorrectAndIsBooleanDataType = (questionList: any)=>{
 
     let numberofCorrect = 0
