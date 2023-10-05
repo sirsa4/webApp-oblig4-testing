@@ -15,5 +15,9 @@ describe("Tests for car component",()=>{
             expect(screen.getByRole("heading",{level: 1})).toBeInTheDocument();
             expect(screen.getByText("car component")).toBeInTheDocument();
     });
+    it("should test that the word 'horse' is not in component",()=>{
+        //b: bounderies in regex - this makes sure to not look in substring, but the word as whole.
+        expect(screen.queryAllByText(/\bhorse\b/gi)).toHaveLength(0)
+    })
 });
 
